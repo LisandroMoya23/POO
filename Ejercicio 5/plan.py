@@ -39,7 +39,7 @@ class ManejadorPlan:
     def agregarPlan(self,unPlan):
         self.__lista.append(unPlan)
     def testPlan(self):
-        archivo = open('C:\\Users\\lisan\\OneDrive\\2° Año\\Programación Orientada a Objetos\\Unidad 2\\Ejercicio 5\\planes.csv')
+        archivo = open('Ejercicio 5\planes.csv')
         reader = csv.reader(archivo,delimiter=';')
         for fila in reader:
             cod = int(fila[0])

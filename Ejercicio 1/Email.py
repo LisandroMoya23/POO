@@ -41,7 +41,7 @@ class manejadorEmail:
     def agregarEmail(self,unEmail):
         self.__listaEmail.append(unEmail)
     def testEmail(self):
-        archivo = open('Datos.csv')
+        archivo = open('Ejercicio 1\Datos.csv')
         reader = csv.reader(archivo,delimiter=',')
         for fila in reader:
             id = fila[0]

@@ -32,7 +32,7 @@ class manejadorViajero:
     def agregarViajero(self,unViajero):
         self.__listaViajero.append(unViajero)
     def testViajero(self):
-        archivo = open('C:\\Users\\lisan\\OneDrive\\2° Año\\Programación Orientada a Objetos\\Unidad 2\\Ejercicio 2\\Datos2.csv')
+        archivo = open('Ejercicio 2\Datos2.csv')
         reader = csv.reader(archivo,delimiter=',')
         for fila in reader:
             num = fila[0]
