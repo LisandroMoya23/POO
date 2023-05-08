@@ -1,4 +1,4 @@
-from ViajeroFrecuente6 import manejadorViajero
+from Manejador6 import manejadorViajero
 
 if __name__== '__main__':
     lista = manejadorViajero()

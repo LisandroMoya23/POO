@@ -1,5 +1,4 @@
-from plan import PlanAhorro
-from plan import ManejadorPlan
+from Manejador5 import ManejadorPlan
 
 if __name__ == '__main__':
     lista = ManejadorPlan()
