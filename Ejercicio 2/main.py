@@ -1,4 +1,3 @@
-from Viajeros import ViajeroFrecuente
 from Viajeros import manejadorViajero
 
 if __name__== '__main__':
