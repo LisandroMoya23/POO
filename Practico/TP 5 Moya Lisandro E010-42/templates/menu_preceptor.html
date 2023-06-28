@@ -1,0 +1,16 @@
+{% extends "base_template2.html" %}
+{% block title %}Funciones Preceptor{% endblock %}
+{% block content %}
+<div class="container" id="opc">
+    <h1>Opciones de Preceptor</h2>
+</div>
+<div class="container" id="menu1">
+    <div id="menu">
+        <a href="{{ url_for('Registrar_Asistencia') }}">Registrar Asistencia</a><br>
+        <a href="{{ url_for('Genera_Informe') }}">Informe con detalles</a><br>
+        <a href="{{ url_for('cerrar_sesion') }}" id="volver">Cerrar sesion</a>
+    </div>
+</div>
+
+ 
+{% endblock %}

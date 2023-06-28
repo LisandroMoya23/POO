@@ -1,0 +1,35 @@
+{% extends "base_template2.html" %}
+{% block title %}Informe Asistencia{% endblock %}
+{% block content %}
+<div class="container" id="detallado">
+  <h1>Informe detallado</h1>
+</div>
+<div class="informe">
+  <table>
+    <tr>
+      <th>Apellido</th>
+      <th>Nombre</th>
+      <th>Asistencias al Aula</th>
+      <th>Asistencias Injustificadas</th>
+      <th>Asistencias Justificadas</th>
+      <th>Asistencias a Educación Física</th>
+      <th>Inasistencias a Educación Física Injustificadas</th>
+      <th>Inasistencias a Educación Física Justificadas</th>
+      <th>Inasistencias Totales</th>
+    </tr>
+    {% for informe_alumno in informe %}
+      <tr>
+        <td>{{ informe_alumno.alumno.apellido }}</td>
+        <td>{{ informe_alumno.alumno.nombre }}</td>
+        <td>{{ informe_alumno.clases_aula_presente }}</td>
+        <td>{{ informe_alumno.clases_aula_ausente_injustificadas }}</td>
+        <td>{{ informe_alumno.clases_aula_ausente_justificadas }}</td>
+        <td>{{ informe_alumno.clases_educacion_fisica_presente }}</td>
+        <td>{{ informe_alumno.clases_educacion_fisica_ausente_injustificadas }}</td>
+        <td>{{ informe_alumno.clases_educacion_fisica_ausente_justificadas }}</td>
+        <td>{{ informe_alumno.total_inasistencias }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

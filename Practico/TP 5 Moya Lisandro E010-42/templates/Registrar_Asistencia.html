@@ -1,0 +1,27 @@
+{% extends "base_template2.html" %}
+{% block title %}Registrar Asistencia{% endblock %}
+{% block content %}
+<h1>Registrar Asistencia</h1>
+<div class="container" id="registrar">
+    <form method="POST" action="http://localhost:5000/Registrar_Asistencia" class="registro">
+        <label for="curso">Seleccione un curso:</label>
+        <select name="curso" id="curso">
+            {% for curso in cursos %}
+                <option value="{{ curso.id }}">{{ curso.id }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label>Tipo clase</label>
+
+        <select name="clase" id="clase">
+            <option value="1">Aula</option>
+            <option value="2">Educacion Fisica</option> 
+        </select><br>
+
+        <label>Fecha</label>
+        <input type = "fecha" name = "fecha" placeholder = "Fecha" required/>
+
+        <button type="submit" class="boton" id="genera">Generar Listado</button>
+    </form>
+</div>
+{% endblock %}
